@@ -90,9 +90,6 @@ class output_yuv:
         Cb_seek = FrameStart + (self.width * self.height)
         self.file.seek(Cb_seek)
 
-        #self.file.write(Cb_arr)
-        #self.file.seek(Cb_seek + ((self.width/2) * (self.height/2)))
-        #self.file.write(Cr_arr)
         nCb = np.fromstring(Cb_arr, dtype='uint8')
         nCr = np.fromstring(Cr_arr, dtype='uint8')
         nCbCr = np.array([nCb, nCr])
